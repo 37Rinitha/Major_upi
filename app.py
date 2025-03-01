@@ -12,12 +12,12 @@ y = dataset.iloc[:, 10].values
 scaler = StandardScaler()
 scaler.fit_transform(x)
 
-model = tf.keras.models.load_model('D:\Rinitha\SRC\MAIN PROJECT\src\model\project_model1.keras')
+model = tf.keras.models.load_model('src/model/project_model1.keras')
 
 app = Flask(__name__)
 
 
-app = Flask(__name__)
+
 
 @app.route('/')
 @app.route('/first')
@@ -26,8 +26,6 @@ def first():
 @app.route('/login')
 def login():
     return render_template('login.html')
-def home():
-	return render_template('home.html')
 @app.route('/upload')
 def upload():
     return render_template('upload.html')  
